@@ -16,13 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-xA-ghC">
-                                <rect key="frame" x="153" y="511" width="108" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pse-BS-SNm">
                                 <rect key="frame" x="153" y="666" width="108" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="GetNewAdrs"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FY-xA-ghC">
+                                <rect key="frame" x="153" y="502" width="108" height="30"/>
+                                <state key="normal" title="SendPage"/>
+                                <connections>
+                                    <segue destination="gqq-0L-zjt" kind="presentation" modalTransitionStyle="flipHorizontal" id="Bye-Ri-8nX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -30,10 +33,10 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FY-xA-ghC" secondAttribute="trailing" constant="153" id="2ll-d8-Sy6"/>
                             <constraint firstItem="Pse-BS-SNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="JvH-Ag-k4m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4FY-xA-ghC" secondAttribute="bottom" constant="321" id="VQo-Ob-1cn"/>
-                            <constraint firstItem="4FY-xA-ghC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="467" id="lfS-mZ-vpc"/>
                             <constraint firstItem="Pse-BS-SNm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="622" id="mqS-XW-kx1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pse-BS-SNm" secondAttribute="bottom" constant="166" id="pux-EZ-kwg"/>
+                            <constraint firstItem="4FY-xA-ghC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="458" id="rnw-wc-7kU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4FY-xA-ghC" secondAttribute="bottom" constant="330" id="wJA-Vz-p6I"/>
                             <constraint firstItem="4FY-xA-ghC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="wiZ-g4-us5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pse-BS-SNm" secondAttribute="trailing" constant="153" id="yTL-Dj-l41"/>
                         </constraints>
@@ -42,6 +45,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8PI-4I-DPU">
+            <objects>
+                <viewController id="gqq-0L-zjt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bW1-Wq-poO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="the public keu comes here (35 digits)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQd-dJ-shA">
+                                <rect key="frame" x="20" y="513" width="374" height="24"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vB0-XT-H9v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vB0-XT-H9v" firstAttribute="bottom" secondItem="rQd-dJ-shA" secondAttribute="bottom" constant="271" id="CUV-9z-0Ue"/>
+                            <constraint firstItem="rQd-dJ-shA" firstAttribute="leading" secondItem="vB0-XT-H9v" secondAttribute="leading" constant="20" id="FmU-eo-s8q"/>
+                            <constraint firstItem="rQd-dJ-shA" firstAttribute="top" secondItem="bW1-Wq-poO" secondAttribute="topMargin" constant="513" id="PKF-fL-9fg"/>
+                            <constraint firstItem="vB0-XT-H9v" firstAttribute="trailing" secondItem="rQd-dJ-shA" secondAttribute="trailing" constant="20" id="QIK-JR-XF9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byM-qL-Pt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924.63768115942037" y="75"/>
         </scene>
     </scenes>
     <resources>
